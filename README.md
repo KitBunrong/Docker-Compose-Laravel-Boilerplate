@@ -1,12 +1,12 @@
 # docker-compose-laravel-boilerplate
 
-A pretty simplified Docker Compose workflow that sets up a LEMP network of containers for local Laravel development. You can view the full article that inspired this repo.
+A pretty simplified Docker Compose workflow that sets up a LEMP network of containers for local Laravel development.
 
 ## Usage
 
 Navigate in your terminal to the directory you cloned this, and spin up the containers for the web server by running `docker-compose up -d --build site`.
 
-After that completes, let's install a brand new Laravel project by running:
+After that completes, go to /src folder and install a brand new Laravel project by running:
 `docker-compose run --rm composer create-project laravel/laravel .`
 
 Bringing up the Docker Compose network with `site` instead of just using `up`, ensures that only our site's containers are brought up at the start, instead of all of the command containers as well. The following are built for our web server, with their exposed ports detailed:
